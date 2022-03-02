@@ -73,6 +73,9 @@ resource "azurerm_windows_virtual_machine" "deogells" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
+  winrm_listener {
+    protocol = http
+    }
 
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
