@@ -74,7 +74,7 @@ resource "azurerm_windows_virtual_machine" "deogells" {
     storage_account_type = "Standard_LRS"
   }
   winrm_listener {
-    protocol = http
+    protocol = "Http"
     }
 
   source_image_reference {
